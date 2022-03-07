@@ -44,8 +44,76 @@ Scanned ansible-config-mgt repo to successfully buit the testing stage. **IMAGE 
 In Blue Ocean, i could see how the Jenkinsfile has caused a new step in the pipeline launch build for the new branch. **IMAGE 16
 ![16](https://user-images.githubusercontent.com/91284177/155360406-d56f5f63-5560-456e-a345-6edbcda55ecb.png)
 
-I Created a pull request to merged the latest code into the main branch. with the result showing success. **IMAGE 17
+I Created a pull request to merge the latest code into the main branch. with the result showing success. **IMAGE 17
 ![17](https://user-images.githubusercontent.com/91284177/155360995-4ce9cadb-f857-4b6a-8299-a07ae115abae.png)
+
+The jenkins file was successfully runned. as shown in the jenkins blue ocean pipeline **IMAGE 18 
+![18](https://user-images.githubusercontent.com/91284177/156926541-5139221f-7d7c-4bc5-a32f-dbee5cc3147b.png)
+
+I downloaded ansible on jenkins server and also downloaded it on jenkins user interface as a plugin. **IMAGES 19 and 20
+![19](https://user-images.githubusercontent.com/91284177/156926628-09caf2de-502e-4cdc-be45-4ee9d4f582ae.png)
+![20](https://user-images.githubusercontent.com/91284177/156926761-76a992f6-2d34-4e70-981c-fc8c72e49bba.png)
+
+Remember jenkins was written in python language, this necessitate installing some dependencies for jenkins to successfully run jenkins file. **IMAGE 21
+![21](https://user-images.githubusercontent.com/91284177/156926848-68841a86-3dbf-4942-b135-841f5d081d67.png)
+
+I added the pem key of the jenkins server to jenkins ansible to enable it to talk to DB server and NGINX server accordingly. **IMAGE 22 
+![22](https://user-images.githubusercontent.com/91284177/156926930-c2da49e8-434c-4cea-85b3-d0184ee96faf.png)
+
+The pipeline was successfully runned with a particular attention to ansible playbook. **IMAGES 23 & 24
+![23](https://user-images.githubusercontent.com/91284177/156927032-83145d3b-f949-4624-8e3a-ae28e199baab.png)
+![24](https://user-images.githubusercontent.com/91284177/156927026-2a283fef-9cae-442c-a2b0-5cccd923e97c.png)
+
+for jenkins to run files from other enviroment other than 'dev'  parameterization was introduced and tested in the feature branch **IMAGE 25 
+![25](https://user-images.githubusercontent.com/91284177/156927330-658a4cb3-f8a2-439b-b4d5-b0daa685f673.png)
+
+**CI/CD PIPELINE FOR TODO APPLICATION
+Prepared Jenkins
+Forged a todo PHP repo into my GITHUB account. https://github.com/darey-devops/php-todo.git
+Installed PHP and installer dependencies **IMAGE 26 & 27
+![26](https://user-images.githubusercontent.com/91284177/156928768-ddd4927b-9a67-47e9-9a8b-1c98bfc0aa7f.png)
+![27](https://user-images.githubusercontent.com/91284177/156928769-52fc5f57-9567-4398-b08d-3ee03e3052c7.png)
+
+Installed Jenkins plugins and Plot plugin Artifactory plugin
+
+I configured my jfrog/artifactory in the jenkins user interface UI. **IMAGES 28 & 29
+
+![28](https://user-images.githubusercontent.com/91284177/156971831-6f2fc79e-85c0-42f9-8b12-e4ea6a3e7e36.png)
+![29](https://user-images.githubusercontent.com/91284177/156971855-b14c5702-9306-49fa-b829-e9c99ae47d11.png)
+
+**Phase 2 – Integrate Artifactory repository with Jenkins
+
+On the database server, I created database and user
+Created database homestead;
+CREATED USER 'homestead'@'%' IDENTIFIED BY 'sePret^i';
+GRANT ALL PRIVILEGES ON * . * TO 'homestead'@'%';
+
+**IMAGE 30
+![30](https://user-images.githubusercontent.com/91284177/157085055-9184b8e8-6222-43fb-bbbe-1f89cefdce9a.png)
+
+A new php-todo pipeline was added to jenkins via blue ocean **IMAGE31
+![31](https://user-images.githubusercontent.com/91284177/157086103-b856a93a-0ef4-4a62-95b3-45341be1e5d9.png)
+
+Updated the Jenkinsfile to include dependencies and Unit tests **IMAGES 32 & 33
+
+![32](https://user-images.githubusercontent.com/91284177/157086323-9beec092-2e13-4d37-9439-f47256e5f294.png)
+![33](https://user-images.githubusercontent.com/91284177/157086353-2305c30c-0f1d-4f8a-a3d1-415817e463ae.png)
+
+**Phase 3 – Code Quality Analysis
+
+Code analysis and Plot Code Coverage Report were added to the php-todo pipeline. **IMAGE 34
+![34](https://user-images.githubusercontent.com/91284177/157088687-9d3fa39b-dee7-4abe-8fb2-15cff0658414.png)
+
+A Plot menu item with chart was configured. **IMAGE 35 & 36
+![35](https://user-images.githubusercontent.com/91284177/157089395-d9b20cc4-ae69-4d6d-852b-3bb5afa18054.png)
+![36](https://user-images.githubusercontent.com/91284177/157089491-86ee88de-1cc4-475e-b483-784612d8f288.png)
+
+I bundled the application code into an artifac, oploaded to artifactory. Published the resulted artifact into Artifactory. **IMAGE 37
+![37](https://user-images.githubusercontent.com/91284177/157091881-87097b80-1bdb-4815-a732-bb1a91334b6a.png)
+
+
+
+
 
 
 

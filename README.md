@@ -108,22 +108,24 @@ A Plot menu item with chart was configured. **IMAGE 35 & 36
 ![35](https://user-images.githubusercontent.com/91284177/157089395-d9b20cc4-ae69-4d6d-852b-3bb5afa18054.png)
 ![36](https://user-images.githubusercontent.com/91284177/157089491-86ee88de-1cc4-475e-b483-784612d8f288.png)
 
-I bundled the application code into an artifac, oploaded to artifactory. Published the resulted artifact into Artifactory. **IMAGE 37
+I bundled the application code into an artifac, oploaded to artifactory. Published the resulted artifact into Artifactory. **IMAGE 37 & 38
 ![37](https://user-images.githubusercontent.com/91284177/157091881-87097b80-1bdb-4815-a732-bb1a91334b6a.png)
+![38](https://user-images.githubusercontent.com/91284177/157743500-b7853a32-455f-43c9-9679-6e17bf170ea3.png)
 
+'deployment to dev enviroment' was added to the php-todo jenkins file and was runned successfully by jenkins. I configured php-todo jenkins file to load the ansible-config-mgt playbook  **IMAGES 39, 40  & 41 . 
 
+![39](https://user-images.githubusercontent.com/91284177/157744924-d7da55da-fee4-44b3-bbf7-796d30d5e785.png)
 
+![40](https://user-images.githubusercontent.com/91284177/157744933-b84438bf-b6ca-47dd-bee0-ddd827d1be54.png)
+![41](https://user-images.githubusercontent.com/91284177/157745053-e7d142f4-5d03-4d30-b201-050905566e6c.png)
 
+Sonarqube was successfully runned and added to the php-todo jenkinsfile to break the built pipleline from completing when with Bugs. **IMAGE 42 & 43
+![42](https://user-images.githubusercontent.com/91284177/157746202-a1a19f2a-2848-4e68-b300-5085bac5ae41.png)
+![43](https://user-images.githubusercontent.com/91284177/157760916-031118c3-2848-491f-80cc-73f55a38ff20.png)
 
+Slave agent was added to jenkins to carry some work load randomly depending on availabilty. **IMAGE 44 
+![A](https://user-images.githubusercontent.com/91284177/157761141-2f920380-8bad-4454-b7a2-5ca3cbebaf70.png)
 
-
-
-
-
-
-
-
-
-
-
+I configured webhook between Jenkins and GitHub to automatically run the pipeline when there is a code to be pushed. **IMAGE 45
+![45](https://user-images.githubusercontent.com/91284177/157761233-5c8848af-5854-402f-83a5-132e50ca5f61.png)
 
